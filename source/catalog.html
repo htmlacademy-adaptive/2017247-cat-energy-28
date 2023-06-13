@@ -15,7 +15,8 @@
 
     <!--Логотип сайта-->
     <a class="main-header__logo-link logo" href="index.html">
-      <img class="logo__image" src="img/logo/logo.svg" width="191" height="38"
+      <img class="logo__image-icon" src="img/logo/logo-icon.svg" width="34" height="38" alt="">
+      <img class="logo__image-text" src="img/logo/logo-text.svg" width="101" height="18"
         alt="Логотип интернет-магазина функционального питания для котов «Кэт энерджи».">
     </a>
 
@@ -70,7 +71,7 @@
               </div>
             </dl>
           </a>
-          <button class="product-card__button button" type="button">Заказать</button>
+          <a class="product-card__link product-card__link--order button" href="#">Заказать</a>
         </li>
         <li class="catalog-products__item product-card">
           <a class="product-card__link" href="#">
@@ -92,7 +93,7 @@
               </div>
             </dl>
           </a>
-          <button class="product-card__button button" type="button">Заказать</button>
+          <a class="product-card__link product-card__link--order button" href="#">Заказать</a>
         </li>
         <li class="catalog-products__item product-card">
           <a class="product-card__link" href="#">
@@ -114,7 +115,7 @@
               </div>
             </dl>
           </a>
-          <button class="product-card__button button" type="button">Заказать</button>
+          <a class="product-card__link product-card__link--order button" href="#">Заказать</a>
         </li>
         <li class="catalog-products__item product-card">
           <a class="product-card__link" href="#">
@@ -136,7 +137,7 @@
               </div>
             </dl>
           </a>
-          <button class="product-card__button button" type="button">Заказать</button>
+          <a class="product-card__link product-card__link--order button" href="#">Заказать</a>
         </li>
         <li class="catalog-products__item product-card">
           <a class="product-card__link" href="#">
@@ -158,7 +159,7 @@
               </div>
             </dl>
           </a>
-          <button class="product-card__button button" type="button">Заказать</button>
+          <a class="product-card__link product-card__link--order button" href="#">Заказать</a>
         </li>
         <li class="catalog-products__item product-card">
           <a class="product-card__link" href="#">
@@ -180,7 +181,7 @@
               </div>
             </dl>
           </a>
-          <button class="product-card__button button" type="button">Заказать</button>
+          <a class="product-card__link product-card__link--order button" href="#">Заказать</a>
         </li>
         <li class="catalog-products__item product-card">
           <a class="product-card__link" href="#">
@@ -202,49 +203,51 @@
               </div>
             </dl>
           </a>
-          <button class="product-card__button button" type="button">Заказать</button>
+          <a class="product-card__link product-card__link--order button" href="#">Заказать</a>
         </li>
         <li class="catalog-products__item product-more-info">
-          <p class="product-more-info__text title">Показать еще 100500 товаров</p>
-          <p class="product-more-info__description">На самом деле вкусов гораздо больше!</p>
-          <button class="product-more-info__button button button--grey" type="button">Показать все</button>
+          <a class="product-more-info__link" href="#">
+            <p class="product-more-info__text title">Показать еще 100500 товаров</p>
+            <p class="product-more-info__description">На самом деле вкусов гораздо больше!</p>
+          </a>
+          <a class="product-more-info__link product-more-info__link-show-all button" href="#">Показать все</a>
         </li>
       </ul>
 
       <!-- Дополнительные товары -->
-      <h4 class="catalog-products__subtitle title">Дополнительные товары</h4>
+      <h2 class="catalog-products__title title">Дополнительные товары</h2>
       <ul class="catalog-products__list-additional additional-products-list">
         <li class="additional-products-list__item">
           <a class="additional-products-list__link" href="#">
-            <h5 class="additional-products-list__title title">Сахарозаменитель</h5>
+            <h3 class="additional-products-list__title title">Сахарозаменитель</h3>
             <p class="additional-products-list__measure">1 упаковка (100 г)<span
                 class="additional-products-list__price">200 ₽</span></p>
           </a>
-          <button class="additional-products-list__button button" type="button">Заказать</button>
+          <a class="additional-products-list__link additional-products-list__link--order button" href="#">Заказать</a>
         </li>
         <li class="additional-products-list__item">
           <a class="additional-products-list__link" href="#">
-            <h5 class="additional-products-list__title title">Питьевая вода</h5>
+            <h3 class="additional-products-list__title title">Питьевая вода</h3>
             <p class="additional-products-list__measure">5 литров<span class="additional-products-list__price">50
                 ₽</span></p>
           </a>
-          <button class="additional-products-list__button button" type="button">Заказать</button>
+          <a class="additional-products-list__link additional-products-list__link--order button" href="#">Заказать</a>
         </li>
         <li class="additional-products-list__item">
           <a class="additional-products-list__link" href="#">
-            <h5 class="additional-products-list__title title">Молоко</h5>
+            <h3 class="additional-products-list__title title">Молоко</h3>
             <p class="additional-products-list__measure">1 литр<span class="additional-products-list__price">100
                 ₽</span></p>
           </a>
-          <button class="additional-products-list__button button" type="button">Заказать</button>
+          <a class="additional-products-list__link additional-products-list__link--order button" href="#">Заказать</a>
         </li>
         <li class="additional-products-list__item">
           <a class="additional-products-list__link" href="#">
-            <h5 class="additional-products-list__title title">Витамины</h5>
+            <h3 class="additional-products-list__title title">Витамины</h3>
             <p class="additional-products-list__measure">1 упаковка (30 г)<span
                 class="additional-products-list__price">300 ₽</span></p>
           </a>
-          <button class="additional-products-list__button button" type="button">Заказать</button>
+          <a class="additional-products-list__link additional-products-list__link--order button" href="#">Заказать</a>
         </li>
       </ul>
 
@@ -282,7 +285,7 @@
       <div class="footer-contacts__socials-wrapper">
 
         <!-- Логотип -->
-        <a class="footer-contacts__logo-link footer-logo" href="index.html" aria-current="page">
+        <a class="footer-contacts__logo-link footer-logo" href="index.html">
           <svg class="footer-logo__icon" aria-hidden="true" focusable="false" width="129" height="24"
             viewBox="0 0 129 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
             <path
