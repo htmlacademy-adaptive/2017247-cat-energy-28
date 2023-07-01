@@ -1,0 +1,197 @@
+@use "./variables.scss";
+
+.main-navigation {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  width: 100%;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  &--inner {
+    @media (min-width: variables.$desktop-width) {
+      .main-navigation__link {
+        font-size: 20px;
+        line-height: 30px;
+        color: #111111;
+      }
+
+      .main-navigation__link--current[aria-current="page"] {
+        text-decoration-color: #68b738;
+      }
+    }
+  }
+}
+
+.main-navigation__toggle {
+  position: absolute;
+  z-index: 4;
+  display: inline-block;
+  top: 0;
+  right: 0;
+  min-width: 64px;
+  min-height: 65px;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-image 0.3s;
+
+  &:active {
+    opacity: variables.$opacity-active;
+    transition-duration: 0.1s;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+}
+
+// Закрытое меню
+.main-navigation--closed .main-navigation__toggle {
+  background-image: url("../img/svg/icon/menu-burger-opened.svg");
+  background-size: 24px 18px;
+  background-repeat: no-repeat;
+  background-position: center top 22px;
+}
+
+@media (max-width: variables.$mobile-width-only) {
+  .main-navigation--closed .main-navigation__wrapper {
+    display: none;
+  }
+}
+
+// Открытое меню
+.main-navigation--opened .main-navigation__toggle {
+  background-image: url("../img/svg/icon/menu-burger-closed.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center top 21px;
+}
+
+@media (max-width: variables.$mobile-width-only) {
+  .main-navigation--opened .main-navigation__wrapper {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    width: 100%;
+    top: 65px;
+    left: 0;
+  }
+
+  .main-navigation--nojs {
+    margin-top: 17px;
+  }
+
+  .main-navigation--nojs .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation--nojs .main-navigation__wrapper {
+    position: static;
+    width: calc(100% + 40px);
+    transform: translateX(-20px);
+  }
+}
+
+.main-navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: #ffffff;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 15px;
+    row-gap: 10px;
+    justify-content: end;
+    align-items: center;
+    background-color: transparent;
+  }
+}
+
+.main-navigation__item {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid #e6e6e6;
+
+  &:last-child {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    border: none;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.main-navigation__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 22px 15px 22px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 36px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  transition: all 0.3s;
+
+  @media (min-width: variables.$tablet-width) {
+    &:hover {
+      opacity: variables.$opacity-link-hover;
+    }
+  }
+
+  &:focus-visible {
+    outline: variables.$outline-focus;
+    transition-duration: 0s;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: variables.$outline-focus;
+      transition-duration: 0s;
+    }
+  }
+
+  &:active {
+    opacity: variables.$opacity-link-active;
+    transition-duration: 0.1s;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 4px 11px 8px 11px;
+    transform: translate(11px, -2px);
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 14px 10px 8px 10px;
+    transform: translate(10px, -2px);
+    font-size: 20px;
+    color: #ffffff;
+  }
+}
+
+.main-navigation__link--current[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #68b738;
+
+  @media (min-width: variables.$desktop-width) {
+    text-decoration-color: #ffffff;
+    text-underline-offset: 6px;
+  }
+}

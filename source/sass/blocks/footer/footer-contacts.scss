@@ -1,0 +1,132 @@
+@use "./variables.scss";
+
+.footer-contacts {
+  @media (min-width: variables.$desktop-width) {
+    position: relative;
+  }
+}
+
+.footer-contacts__info-wrapper {
+  padding: 26px 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 56px 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0;
+  }
+
+  &--grey-bg {
+    background-color: #f2f2f2;
+
+    @media (min-width: variables.$desktop-width) {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.footer-contacts__info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: 25% 25%;
+    gap: 50px;
+    justify-content: space-between;
+    width: calc(100% - 100px);
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    position: absolute;
+    z-index: 2;
+    grid-template-columns: 1fr 1fr;
+    gap: 74px;
+    top: 95px;
+    left: 110px;
+    width: 565px;
+    padding: 56px 60px 56px 80px;
+    background-color: #ffffff;
+  }
+}
+
+.footer-contacts__text {
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 4px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.footer-contacts__address {
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 7px;
+    text-align: right;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    text-align: left;
+  }
+}
+
+.footer-contacts__socials-wrapper {
+  padding: 40px 20px;
+  background-color: #f2f2f2;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 55px 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 66px 20px;
+  }
+}
+
+.footer-contacts__container {
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.footer-contacts__wrapper {
+  border-bottom: 1px solid #d9d9d9;
+
+  &--logo {
+    padding-bottom: 19px;
+    text-align: center;
+  }
+
+  &--socials-link {
+    padding: 20px 0 19px 0;
+  }
+
+  &--develop {
+    padding-top: 20px;
+    border-bottom: 0;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
+    border-bottom: 0;
+
+    &--logo {
+      text-align: left;
+    }
+
+    &--develop {
+      justify-self: end;
+    }
+  }
+}

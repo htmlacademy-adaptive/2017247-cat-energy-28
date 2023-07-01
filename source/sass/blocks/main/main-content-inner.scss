@@ -1,0 +1,28 @@
+@use "./variables.scss";
+
+.main-content-inner {
+  flex: 1 1 auto;
+  padding: 27px 20px 35px 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 56px;
+    padding-bottom: 86px;
+  }
+}
+
+.main-content-inner__title {
+  margin-bottom: 41px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 84px;
+  }
+}
