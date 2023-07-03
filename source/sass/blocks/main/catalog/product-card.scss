@@ -46,50 +46,50 @@
 
 .product-card__link {
   text-decoration: none;
+}
 
-  &--info {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    align-items: center;
-    margin-bottom: 12px;
-    color: #444444;
-    transition: all 0.3s;
+.product-card__link--info {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #444444;
+  transition: all 0.3s;
 
-    @media (min-width: variables.$tablet-width) {
-      grid-template-columns: 1fr;
-      margin-bottom: 33px;
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: 1fr;
+    margin-bottom: 33px;
 
-      &:hover {
-        opacity: variables.$opacity-link-hover;
-      }
-    }
-
-    &:focus-visible {
-      outline: variables.$outline-focus;
-      transition-duration: 0s;
-    }
-
-    @supports not selector(:focus-visible) {
-      &:focus {
-        outline: variables.$outline-focus;
-        transition-duration: 0s;
-      }
-    }
-
-    &:active {
-      opacity: variables.$opacity-link-active;
-      transition-duration: 0.1s;
+    &:hover {
+      opacity: variables.$opacity-link-hover;
     }
   }
 
-  &--order {
-    @media (min-width: variables.$tablet-width) {
-      min-width: 248px;
-    }
+  &:focus-visible {
+    outline: variables.$outline-focus;
+    transition-duration: 0s;
+  }
 
-    @media (min-width: variables.$desktop-width) {
-      min-width: 168px;
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: variables.$outline-focus;
+      transition-duration: 0s;
     }
+  }
+
+  &:active {
+    opacity: variables.$opacity-link-active;
+    transition-duration: 0.1s;
+  }
+}
+
+.product-card__link--order {
+  @media (min-width: variables.$tablet-width) {
+    min-width: 248px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 168px;
   }
 }
 
@@ -125,8 +125,7 @@
 }
 
 .product-card__title {
-  margin-bottom: 14px;
-  margin-top: 1px;
+  margin: 1px 0 14px 0;
   padding-right: 50px;
   font-size: 16px;
   line-height: 20px;

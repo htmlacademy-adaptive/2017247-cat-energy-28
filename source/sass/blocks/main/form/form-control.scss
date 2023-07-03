@@ -33,7 +33,7 @@
   }
 }
 
-.form-control__input[type="checkbox"]:checked+.form-control__text::after {
+.form-control__input[type="checkbox"]:checked + .form-control__text::after {
   position: absolute;
   top: 50%;
   left: 2px;
@@ -48,7 +48,7 @@
   transition: all 0.3s;
 }
 
-.form-control__input[type="radio"]:checked+.form-control__text::after {
+.form-control__input[type="radio"]:checked + .form-control__text::after {
   position: absolute;
   top: 50%;
   left: 8.5px;
@@ -67,13 +67,13 @@
   }
 }
 
-.form-control__input:focus-visible+.form-control__text::before {
+.form-control__input:focus-visible + .form-control__text::before {
   outline: variables.$outline-focus;
   transition-duration: 0s;
 }
 
 @supports not selector(:focus-visible) {
-  .form-control__input:focus+.form-control__text::before {
+  .form-control__input:focus + .form-control__text::before {
     outline: variables.$outline-focus;
     transition-duration: 0s;
   }
@@ -85,7 +85,7 @@
   transition-duration: 0.1s;
 }
 
-.form-control__input:checked:active+.form-control__text::after {
+.form-control__input:checked:active + .form-control__text::after {
   opacity: variables.$opacity-active;
   transition-duration: 0.1s;
 }

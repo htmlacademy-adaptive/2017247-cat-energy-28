@@ -3,6 +3,7 @@
 @use "./base/base.scss";
 
 // Блоки компонентов
+@use "./blocks/page.scss";
 @use "./blocks/container.scss";
 @use "./blocks/title.scss";
 @use "./blocks/button.scss";

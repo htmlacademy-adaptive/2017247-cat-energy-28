@@ -48,49 +48,50 @@
 .additional-products-list__link {
   text-decoration: none;
   transition: all 0.3s;
+}
 
-  &--info {
-    @media (min-width: variables.$tablet-width) {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 20px;
+.additional-products-list__link--info {
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
 
-      &:hover {
-        opacity: variables.$opacity-link-hover;
-      }
-    }
-
-    &:focus-visible {
-      outline: variables.$outline-focus;
-      transition-duration: 0s;
-    }
-
-    @supports not selector(:focus-visible) {
-      &:focus {
-        outline: variables.$outline-focus;
-        transition-duration: 0s;
-      }
-    }
-
-    &:active {
-      opacity: variables.$opacity-link-active;
-      transition-duration: 0.1s;
-    }
-
-    @media (min-width: variables.$desktop-width) {
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
+    &:hover {
+      opacity: variables.$opacity-link-hover;
     }
   }
 
-  &--order {
-    @media (min-width: variables.$desktop-width) {
-      min-width: 244px;
+  &:focus-visible {
+    outline: variables.$outline-focus;
+    transition-duration: 0s;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: variables.$outline-focus;
+      transition-duration: 0s;
     }
+  }
+
+  &:active {
+    opacity: variables.$opacity-link-active;
+    transition-duration: 0.1s;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+.additional-products-list__link--order {
+  @media (min-width: variables.$desktop-width) {
+    min-width: 244px;
   }
 }
 
 .additional-products-list__title {
+  margin: 0;
   margin-bottom: 13px;
   font-size: 16px;
   line-height: 16px;
