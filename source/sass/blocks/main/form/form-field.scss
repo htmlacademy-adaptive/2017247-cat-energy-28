@@ -1,0 +1,96 @@
+@use "./variables.scss";
+
+.form-field {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 13px;
+  cursor: pointer;
+
+  &--mail {
+    &::before {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      min-width: 20px;
+      min-height: 20px;
+      background-color: #000000;
+      mask-image: url("../img/svg/icon/letter.svg");
+      mask-size: 20px 20px;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      transition: all 0.3s;
+    }
+  }
+
+  &--phone {
+    &::before {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      min-width: 20px;
+      min-height: 20px;
+      background-color: #000000;
+      mask-image: url("../img/svg/icon/phone.svg");
+      mask-size: 20px 20px;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      transition: all 0.3s;
+    }
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &:hover::before {
+      background-color: #222222;
+    }
+  }
+
+  &:focus-within::before {
+    background-color: #68b738;
+    transition-duration: 0s;
+  }
+
+  &:active::before {
+    background-color: #68b738;
+    transition-duration: 0.1s;
+  }
+
+  // Ошибка ввода или не указаны данные
+  &--error {
+    .form-field__input {
+      outline: 1px solid #ff8282;
+      border: 1px solid #ff8282;
+    }
+
+    &::before {
+      background-color: #ff8282;
+    }
+  }
+}
+
+// Неактивное состояние
+.form-field.disabled {
+  opacity: variables.$input-label-opacity-disabled;
+  pointer-events: none;
+}
+
+.form-field--phone .form-field__input,
+.form-field--mail .form-field__input {
+  padding-right: 32px;
+  padding-left: 14px;
+}
+
+.form-field__text {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.form-field__input {
+  width: 100%;
+}

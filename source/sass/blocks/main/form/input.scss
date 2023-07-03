@@ -1,0 +1,62 @@
+@use "./variables.scss";
+
+.input {
+  padding: 14px 20px 13px 20px;
+  border: 1px solid #e7e7e7;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+  appearance: none;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &::placeholder {
+    color: #444444;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    &:hover {
+      border-color: variables.$input-field-border-color-hover-active;
+    }
+  }
+
+  &:focus-visible {
+    outline: variables.$outline-focus;
+    transition-duration: 0s;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: variables.$outline-focus;
+      transition-duration: 0s;
+    }
+  }
+
+  &:active {
+    border-color: variables.$input-field-border-color-hover-active;
+    transition-duration: 0.1s;
+  }
+
+  // Неактивное состояние
+  &:disabled {
+    opacity: variables.$input-label-opacity-disabled;
+    pointer-events: none;
+  }
+
+  // Ошибка ввода или не указаны данные
+  &--error {
+    outline: 1px solid #ff8282;
+    border: 1px solid #ff8282;
+  }
+
+  &--textarea {
+    padding: 8px 11px 8px 14px;
+    height: 100%;
+    resize: none;
+  }
+}

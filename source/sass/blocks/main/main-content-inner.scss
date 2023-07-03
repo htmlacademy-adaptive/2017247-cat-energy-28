@@ -4,6 +4,10 @@
   flex: 1 1 auto;
   padding: 27px 20px 35px 20px;
 
+  @media (max-width: variables.$mobile-width-only) {
+    border-top: 1px solid #d9d9d9;
+  }
+
   @media (min-width: variables.$tablet-width) {
     padding-top: 45px;
     padding-bottom: 76px;
@@ -12,6 +16,10 @@
   @media (min-width: variables.$desktop-width) {
     padding-top: 56px;
     padding-bottom: 86px;
+  }
+
+  &--form {
+    padding-bottom: 32px;
   }
 }
 
@@ -25,4 +33,15 @@
   @media (min-width: variables.$desktop-width) {
     margin-bottom: 84px;
   }
+
+  &--form {
+    margin-bottom: 37px;
+  }
+}
+
+.main-content-inner__description {
+  margin: 0 7px 17px 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #000000;
 }

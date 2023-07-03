@@ -53,8 +53,8 @@
   </header>
 
   <!--ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ ФОРМЫ-->
-  <main class="main-content-inner">
-    <h1 class="main-content-inner__title title">Подбор программы</h1>
+  <main class="main-content-inner main-content-inner--form container">
+    <h1 class="main-content-inner__title main-content-inner__title--form title">Подбор программы</h1>
     <p class="main-content-inner__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
     <!-- Анкета -->
@@ -64,10 +64,11 @@
       <form class="questionnaire__form form" action="https://echo.htmlacademy.ru/" method="post">
 
         <!-- Данные кота -->
-        <fieldset class="form__group">
+        <fieldset class="form__group form__group--name">
           <legend class="visually-hidden">Данные вашего кота.</legend>
           <ul class="form__field-list">
             <li class="form__field-item">
+              <!-- Если не указаны данные в поле ввода, добавить у label класс form-field--error -->
               <label class="form__field-label form-field">
                 <span class="form__field-text form-field__text">Имя:*</span>
                 <input class="form__field-input form-field__input input" type="text" name="name"
@@ -92,10 +93,11 @@
         </fieldset>
 
         <!-- Выбор программы -->
-        <fieldset class="form__group">
+        <fieldset class="form__group form__group--programs">
           <legend class="visually-hidden">Выбор программы.</legend>
           <ul class="form__control-list">
             <li class="form__control-item">
+              <!-- Если input неактивен, добавить у label класс disabled -->
               <label class="form__control-label form-control form-control--radio">
                 <input class="visually-hidden form-control__input" type="radio" name="program" value="weight-loss"
                   checked>
@@ -119,12 +121,15 @@
 
         <!-- Контактные данные (владельца кота) -->
         <fieldset class="form__group">
-          <legend class="form__group-title title">Контактные данные (владельца кота)</legend>
+          <legend class="form__group-title form__group-title--decoration form__group-title--decoration-contacts title">
+            <span class="form__group-title-text">Контактные данные (владельца
+              кота)</span>
+          </legend>
           <ul class="form__field-list">
             <li class="form__field-item">
+              <!-- Если не указаны данные в поле ввода, добавить у label класс form-field--error -->
               <label class="form__field-label form-field form-field--mail">
                 <span class="form__field-text form-field__text">E-mail:*</span>
-                <!-- Если не указаны данные в поле ввода, добавить класс input--error -->
                 <input class="form__field-input form-field__input input" type="email" name="email"
                   placeholder="Введите e-mail" value="Kuklachev@gmail.com" title="email@example.com" required>
               </label>
@@ -132,8 +137,8 @@
             <li class="form__field-item">
               <!-- Если input неактивен, добавить у label класс disabled -->
               <label class="form__field-label form-field form-field--phone">
-                <span class="form__field-text form-field__text">Телефон:*</span>
-                <input class="form__field-input form-field__input input" type="tel" name="phone"
+                <span class="form__field-text form-field__text form-field__text--phone">Телефон:*</span>
+                <input class="form__field-input form-field__input input input--phone" type="tel" name="phone"
                   placeholder="Введите телефон" value="8 (960) 900-60-90"
                   title="Введите 11 цифр. Например: 8 (800) 555-86-28" required>
               </label>
@@ -143,7 +148,9 @@
 
         <!-- Комментарий -->
         <fieldset class="form__group">
-          <legend class="form__group-title title">Комментарий</legend>
+          <legend class="form__group-title form__group-title--decoration form__group-title--decoration-comment title">
+            <span class="form__group-title-text">Комментарий</span>
+          </legend>
           <label class="visually-hidden" for="form-field-comment">Ваш комментарий.</label>
           <!-- Если не указаны данные в поле ввода, добавить класс input--error -->
           <textarea class="form__field-input form__field-input--textarea input input--textarea" id="form-field-comment"
@@ -152,7 +159,10 @@
 
         <!-- Дополнительно -->
         <fieldset class="form__group">
-          <legend class="form__group-title title">Дополнительно</legend>
+          <legend class="form__group-title form__group-title--decoration title">
+            <span class="form__group-title-text">Дополнительно
+            </span>
+          </legend>
           <ul class="form__control-list">
             <li class="form__control-item">
               <!-- Если input неактивен, добавить у label класс disabled -->
