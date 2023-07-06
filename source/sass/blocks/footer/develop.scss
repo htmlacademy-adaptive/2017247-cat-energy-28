@@ -9,7 +9,7 @@
   font-size: 16px;
   line-height: 19px;
   color: #444444;
-  transition: all 0.3s;
+  transition: color 0.5s ease-out, opacity 0.5s;
 
   @media (min-width: variables.$tablet-width) {
     min-width: 168px;
@@ -22,21 +22,18 @@
   &:focus-visible {
     color: variables.$footer-link-color-hover-focus;
     outline: variables.$outline-focus;
-    transition-duration: 0s;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       color: variables.$footer-link-color-hover-focus;
       outline: variables.$outline-focus;
-      transition-duration: 0s;
     }
   }
 
   &:active {
     color: variables.$footer-link-color-hover-focus;
     opacity: variables.$opacity-link-active;
-    transition-duration: 0.1s;
   }
 }
 

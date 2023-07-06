@@ -13,7 +13,7 @@
   background-color: #68b738;
   border: none;
   appearance: none;
-  transition: all 0.3s linear;
+  transition: background-color 0.5s ease-out, color 0.5s;
   cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
@@ -24,20 +24,19 @@
 
   &:focus-visible {
     outline: variables.$outline-focus;
-    transition-duration: 0s;
+    outline-offset: 0;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       outline: variables.$outline-focus;
-      transition-duration: 0s;
+      outline-offset: 0;
     }
   }
 
   &:active {
     background-color: variables.$bg-hover-active;
     color: rgba(255, 255, 255, 0.3);
-    transition-duration: 0.1s;
   }
 
   &:disabled {

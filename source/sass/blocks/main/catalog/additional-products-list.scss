@@ -47,7 +47,7 @@
 
 .additional-products-list__link {
   text-decoration: none;
-  transition: all 0.3s;
+  transition: opacity 0.5s;
 }
 
 .additional-products-list__link--info {
@@ -63,19 +63,16 @@
 
   &:focus-visible {
     outline: variables.$outline-focus;
-    transition-duration: 0s;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       outline: variables.$outline-focus;
-      transition-duration: 0s;
     }
   }
 
   &:active {
     opacity: variables.$opacity-link-active;
-    transition-duration: 0.1s;
   }
 
   @media (min-width: variables.$desktop-width) {

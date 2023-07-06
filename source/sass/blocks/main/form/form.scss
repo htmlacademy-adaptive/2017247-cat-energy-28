@@ -1,5 +1,20 @@
 @use "./variables.scss";
 
+.form__group-wrapper {
+  margin-bottom: 24px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 69px;
+  }
+}
+
 .form__group {
   position: relative;
   margin: 0;
@@ -7,13 +22,37 @@
   padding: 0;
   border: none;
 
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 auto;
+    margin-bottom: 65px;
+  }
+
   &--name {
-    padding: 22px 0 24px 0;
+    padding: 22px 0;
     margin-bottom: 0;
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 33px 0 72px 0;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding: 0;
+      margin: 0;
+    }
   }
 
   &--programs {
-    padding: 22px 0 19px 0;
+    padding: 20px 0;
+    margin-bottom: 0;
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 25px 28px;
+      border: 1px solid #e7e7e7;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      margin: 0;
+    }
   }
 
   &--name::after,
@@ -25,27 +64,85 @@
     width: calc(100% + 40px);
     height: 1px;
     background-color: #d9d9d9;
+
+    @media (min-width: variables.$tablet-width) {
+      content: none;
+    }
   }
 
-  &:last-of-type {
-    margin-bottom: 34px;
+  &--comment {
+    @media (min-width: variables.$tablet-width) {
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      margin-bottom: 67px;
+    }
+  }
+
+  &--additionally {
+    margin-bottom: 30px;
+
+    @media (min-width: variables.$tablet-width) {
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      margin-bottom: 61px;
+    }
   }
 }
 
 .form__field-list,
 .form__control-list {
   display: grid;
-  gap: 12px;
+  gap: 13px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 auto;
+    gap: 20px;
+  }
+}
+
+.form__field-list {
+  @media (min-width: variables.$desktop-width) {
+    &--contacts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 78px;
+    }
+  }
+}
+
+.form__control-list {
+  &--programs {
+    @media (min-width: variables.$tablet-width) {
+      gap: 13px;
+    }
+  }
+
+  &--additionally {
+    @media (min-width: variables.$tablet-width) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 57px;
+      row-gap: 32px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 78px;
+    }
+  }
 }
 
 .form__group-title {
   width: 100%;
   padding: 0;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
   font-size: 24px;
   line-height: 26px;
 
@@ -68,26 +165,40 @@
     &::before {
       top: 30%;
     }
+
+    @media (min-width: variables.$tablet-width) {
+      &::before {
+        top: 59%;
+      }
+    }
   }
 
-  // @media (min-width: variables.$tablet-width) {
-  //   margin-bottom: 77px;
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 76px;
 
-  //   &::before {
-  //     width: calc(100% + 60px);
-  //     left: -30px;
-  //   }
-  // }
+    &::before {
+      width: calc(100% + 138px);
+      left: -69px;
+    }
 
-  // @media (min-width: variables.$desktop-width) {
-  //   &::before {
-  //     width: calc(100% + 220px);
-  //     left: -110px;
-  //   }
-  // }
+    &--decoration-additionally {
+      margin-bottom: 57px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::before {
+      width: calc(100% + 220px);
+      left: -110px;
+    }
+  }
 
   &--decoration-comment {
     margin-bottom: 33px;
+
+    @media (min-width: variables.$tablet-width) {
+      margin-bottom: 76px;
+    }
   }
 }
 
@@ -98,7 +209,6 @@
     position: absolute;
     z-index: -1;
     left: -20px;
-    top: 0;
     right: -20px;
     content: "";
     width: calc(100% + 40px);
@@ -106,62 +216,53 @@
     background-color: #ffffff;
   }
 
-  // @media (min-width: variables.$tablet-width) {
-  //   margin: 0 36px;
-  //   font-size: 36px;
-  //   line-height: 36px;
+  @media (min-width: variables.$tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
 
-  //   &::before {
-  //     width: calc(100% + 72px);
-  //     left: -36px;
-  //     right: -36px;
-  //   }
-  // }
-
-  // @media (min-width: variables.$desktop-width) {
-  //   margin-left: 40px;
-  //   transform: translateX(-40px);
-
-  //   &::before {
-  //     width: calc(100% + 76px);
-  //     left: -40px;
-  //   }
-  // }
+    &::before {
+      width: calc(100% + 80px);
+      left: -40px;
+      right: -40px;
+    }
+  }
 }
 
 .form__field-input--textarea {
-  // display: block;
   width: 100%;
   min-height: 150px;
   margin: 0;
 
-  // @media (min-width: variables.$tablet-width) {
-  //   min-height: 154px;
-  //   width: calc(100% + 72px);
-  //   margin-left: -36px;
-  // }
+  @media (min-width: variables.$tablet-width) {
+    min-height: 174px;
+  }
 
-  // @media (min-width: variables.$desktop-width) {
-  //   max-width: 768px;
-  //   min-height: 160px;
-  //   margin: 0 auto;
-  // }
+  @media (min-width: variables.$desktop-width) {
+    min-height: 174px;
+  }
+}
+
+// Ошибка ввода или не указаны данные
+.form__field-label.form-field--error + .form__field-input {
+  outline: 1px solid #ff8282;
+  border: 1px solid #ff8282;
 }
 
 .form__button-wrapper {
   width: 100%;
 
-  // @media (min-width: variables.$tablet-width) {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   max-width: 688px;
-  //   margin: 0 auto;
-  // }
+  @media (min-width: variables.$tablet-width) {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 73.4%;
+    margin: 0 39px;
+  }
 
-  // @media (min-width: variables.$desktop-width) {
-  //   max-width: 808px;
-  // }
+  @media (min-width: variables.$desktop-width) {
+    width: 67.7%;
+    margin: 0;
+  }
 }
 
 .form__button {
@@ -172,15 +273,17 @@
     width: 100%;
   }
 
-  // @media (min-width: variables.$tablet-width) {
-  //   min-width: 324px;
-  //   margin-bottom: 0;
-  //   margin-right: 30px;
-  // }
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 0;
+    margin-right: 30px;
+    padding: 13px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 
-  // @media (min-width: variables.$desktop-width) {
-  //   min-width: 384px;
-  // }
+  @media (min-width: variables.$desktop-width) {
+    min-width: 568px;
+  }
 }
 
 .form__comment {
@@ -190,7 +293,8 @@
   text-align: center;
   color: #000000;
 
-  // @media (min-width: variables.$tablet-width) {
-  //   font-size: 14px;
-  // }
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    text-align: left;
+  }
 }

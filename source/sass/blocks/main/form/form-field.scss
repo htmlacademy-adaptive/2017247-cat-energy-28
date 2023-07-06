@@ -2,13 +2,14 @@
 
 .form-field {
   position: relative;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
   align-items: center;
   gap: 13px;
   cursor: pointer;
 
   &--mail {
+    gap: 10px;
+
     &::before {
       position: absolute;
       right: 15px;
@@ -22,11 +23,17 @@
       mask-size: 20px 20px;
       mask-repeat: no-repeat;
       mask-position: center;
-      transition: all 0.3s;
+      transition: background-color 0.5s;
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      gap: 20px;
     }
   }
 
   &--phone {
+    gap: 10px;
+
     &::before {
       position: absolute;
       right: 15px;
@@ -40,7 +47,11 @@
       mask-size: 20px 20px;
       mask-repeat: no-repeat;
       mask-position: center;
-      transition: all 0.3s;
+      transition: background-color 0.5s;
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      gap: 20px;
     }
   }
 
@@ -52,12 +63,10 @@
 
   &:focus-within::before {
     background-color: #68b738;
-    transition-duration: 0s;
   }
 
   &:active::before {
     background-color: #68b738;
-    transition-duration: 0.1s;
   }
 
   // Ошибка ввода или не указаны данные
@@ -83,14 +92,28 @@
 .form-field--mail .form-field__input {
   padding-right: 32px;
   padding-left: 14px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-right: 35px;
+    padding-left: 19px;
+  }
 }
 
 .form-field__text {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   text-transform: uppercase;
+  max-width: 94px;
+  flex-shrink: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 117px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form-field__input {
   width: 100%;
+  flex-grow: 1;
 }

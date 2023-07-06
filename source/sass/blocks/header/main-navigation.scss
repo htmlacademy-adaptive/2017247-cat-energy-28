@@ -37,11 +37,10 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  transition: background-image 0.3s;
+  transition: opacity 0.5s;
 
   &:active {
     opacity: variables.$opacity-active;
-    transition-duration: 0.1s;
   }
 
   @media (min-width: variables.$tablet-width) {
@@ -143,7 +142,7 @@
   text-align: center;
   text-transform: uppercase;
   color: #000000;
-  transition: all 0.3s;
+  transition: opacity 0.5s;
 
   @media (min-width: variables.$tablet-width) {
     &:hover {
@@ -153,19 +152,16 @@
 
   &:focus-visible {
     outline: variables.$outline-focus;
-    transition-duration: 0s;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       outline: variables.$outline-focus;
-      transition-duration: 0s;
     }
   }
 
   &:active {
     opacity: variables.$opacity-link-active;
-    transition-duration: 0.1s;
   }
 
   @media (min-width: variables.$tablet-width) {

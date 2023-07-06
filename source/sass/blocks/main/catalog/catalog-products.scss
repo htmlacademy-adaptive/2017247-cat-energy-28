@@ -237,7 +237,7 @@
   line-height: 20px;
   text-align: center;
   text-decoration: none;
-  transition: all 0.3s;
+  transition: opacity 0.5s;
 
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;
@@ -255,19 +255,16 @@
 
   &:focus-visible {
     outline: variables.$outline-focus;
-    transition-duration: 0s;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       outline: variables.$outline-focus;
-      transition-duration: 0s;
     }
   }
 
   &:active {
     opacity: variables.$opacity-link-active;
-    transition-duration: 0.1s;
   }
 
   @media (min-width: variables.$desktop-width) {

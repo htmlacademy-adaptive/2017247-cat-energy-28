@@ -20,6 +20,14 @@
 
   &--form {
     padding-bottom: 32px;
+
+    @media (min-width: variables.$tablet-width) {
+      padding-bottom: 72px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding-bottom: 82px;
+    }
   }
 }
 
@@ -37,12 +45,32 @@
 
   &--form {
     margin-bottom: 37px;
+
+    @media (min-width: variables.$tablet-width) {
+      margin-bottom: 54px;
+      margin-left: 39px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      margin-left: 0;
+    }
   }
 }
 
 .main-content-inner__description {
-  margin: 0 7px 17px 0;
+  margin: 0 0 17px 0;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: #000000;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 33px 39px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-left: 0;
+    margin-bottom: 66px;
+  }
 }

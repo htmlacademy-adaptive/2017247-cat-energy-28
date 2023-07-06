@@ -31,7 +31,6 @@
   display: grid;
   text-decoration: none;
   color: #444444;
-  transition: all 0.3s;
 }
 
 .product-more-info__link--show-more {
@@ -41,6 +40,7 @@
   background-size: 30px 30px;
   background-repeat: no-repeat;
   background-position: center top;
+  transition: opacity 0.5s;
 
   @media (min-width: variables.$tablet-width) {
     row-gap: 23px;
@@ -55,13 +55,11 @@
 
   &:focus-visible {
     outline: variables.$outline-focus;
-    transition-duration: 0s;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       outline: variables.$outline-focus;
-      transition-duration: 0s;
     }
   }
 
@@ -72,6 +70,7 @@
 
 .product-more-info__link--show-all {
   background-color: #f2f2f2;
+  transition: background-color 0.5s ease-out, color 0.5s;
 
   @media (min-width: variables.$tablet-width) {
     min-width: 248px;
@@ -83,20 +82,17 @@
 
   &:focus-visible {
     outline: variables.$outline-focus;
-    transition-duration: 0s;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       outline: variables.$outline-focus;
-      transition-duration: 0s;
     }
   }
 
   &:active {
     background-color: #ebebeb;
     color: rgba(68, 68, 68, 0.3);
-    transition-duration: 0.1s;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -113,10 +109,18 @@
   line-height: 20px;
   text-transform: uppercase;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: variables.$tablet-width) {
     margin-top: 203px;
     font-size: 20px;
     line-height: 22px;
+
+    br {
+      display: block;
+    }
   }
 }
 
@@ -126,14 +130,16 @@
   font-size: 12px;
   line-height: 16px;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: variables.$tablet-width) {
     font-size: 16px;
     line-height: 18px;
-  }
-}
 
-br {
-  @media (max-width: variables.$mobile-width-only) {
-    display: none;
+    br {
+      display: block;
+    }
   }
 }

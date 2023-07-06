@@ -54,7 +54,7 @@
   align-items: center;
   margin-bottom: 12px;
   color: #444444;
-  transition: all 0.3s;
+  transition: opacity 0.5s, transform 0.6s ease-in-out;
 
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: 1fr;
@@ -63,23 +63,28 @@
     &:hover {
       opacity: variables.$opacity-link-hover;
     }
+
+    &:hover .product-card__image {
+      transform: translate(0, -8px);
+    }
   }
 
   &:focus-visible {
     outline: variables.$outline-focus;
-    transition-duration: 0s;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       outline: variables.$outline-focus;
-      transition-duration: 0s;
     }
   }
 
   &:active {
     opacity: variables.$opacity-link-active;
-    transition-duration: 0.1s;
+  }
+
+  &:active .product-card__image {
+    transform: translate(0, -8px) scale(1.1);
   }
 }
 

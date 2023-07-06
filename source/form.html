@@ -10,9 +10,12 @@
   <link rel="apple-touch-icon" href="img/favicons/favicon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/lato/lato-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
-<body class="page__body">
+<body class=" page__body">
 
   <!--ШАПКА СТРАНИЦЫ ФОРМЫ-->
   <header class="page__header main-header main-header--inner container">
@@ -55,7 +58,7 @@
   <!--ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ ФОРМЫ-->
   <main class="main-content-inner main-content-inner--form container">
     <h1 class="main-content-inner__title main-content-inner__title--form title">Подбор программы</h1>
-    <p class="main-content-inner__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <p class="main-content-inner__description">Заполните анкету, и мы подберем <br>программу питания для вашего кота</p>
 
     <!-- Анкета -->
     <section class="questionnaire">
@@ -63,69 +66,71 @@
 
       <form class="questionnaire__form form" action="https://echo.htmlacademy.ru/" method="post">
 
-        <!-- Данные кота -->
-        <fieldset class="form__group form__group--name">
-          <legend class="visually-hidden">Данные вашего кота.</legend>
-          <ul class="form__field-list">
-            <li class="form__field-item">
-              <!-- Если не указаны данные в поле ввода, добавить у label класс form-field--error -->
-              <label class="form__field-label form-field">
-                <span class="form__field-text form-field__text">Имя:*</span>
-                <input class="form__field-input form-field__input input" type="text" name="name"
-                  placeholder="Кличка кота" value="Барсик" required>
-              </label>
-            </li>
-            <li class="form__field-item">
-              <label class="form__field-label form-field">
-                <span class="form__field-text form-field__text">Вес (кг):*</span>
-                <input class="form__field-input form-field__input input" type="text" name="weight"
-                  placeholder="Вес кота" value="7" required>
-              </label>
-            </li>
-            <li class="form__field-item">
-              <label class="form__field-label form-field">
-                <span class="form__field-text form-field__text">Возраст (лет):</span>
-                <input class="form__field-input form-field__input input" type="text" name="age"
-                  placeholder="Возраст кота" value="7">
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+        <div class="form__group-wrapper">
+          <!-- Данные кота -->
+          <fieldset class="form__group form__group--name container-form-group">
+            <legend class="visually-hidden">Данные вашего кота.</legend>
+            <ul class="form__field-list">
+              <li class="form__field-item">
+                <!-- Если не указаны данные в поле ввода, добавить у label класс form-field--error -->
+                <label class="form__field-label form-field">
+                  <span class="form__field-text form-field__text">Имя:*</span>
+                  <input class="form__field-input form-field__input input" type="text" name="name"
+                    placeholder="Кличка кота" value="Барсик" required>
+                </label>
+              </li>
+              <li class="form__field-item">
+                <label class="form__field-label form-field">
+                  <span class="form__field-text form-field__text">Вес (кг):*</span>
+                  <input class="form__field-input form-field__input input" type="text" name="weight"
+                    placeholder="Вес кота" value="7" required>
+                </label>
+              </li>
+              <li class="form__field-item">
+                <label class="form__field-label form-field">
+                  <span class="form__field-text form-field__text">Возраст (лет):</span>
+                  <input class="form__field-input form-field__input input" type="text" name="age"
+                    placeholder="Возраст кота" value="7">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-        <!-- Выбор программы -->
-        <fieldset class="form__group form__group--programs">
-          <legend class="visually-hidden">Выбор программы.</legend>
-          <ul class="form__control-list">
-            <li class="form__control-item">
-              <!-- Если input неактивен, добавить у label класс disabled -->
-              <label class="form__control-label form-control form-control--radio">
-                <input class="visually-hidden form-control__input" type="radio" name="program" value="weight-loss"
-                  checked>
-                <span class="form-control__text">Похудение</span>
-              </label>
-            </li>
-            <li class="form__control-item">
-              <label class="form__control-label form-control form-control--radio">
-                <input class="visually-hidden form-control__input" type="radio" name="program" value="mass-gain">
-                <span class="form-control__text">Набор массы</span>
-              </label>
-            </li>
-            <li class="form__control-item">
-              <label class="form__control-label form-control form-control--radio">
-                <input class="visually-hidden form-control__input" type="radio" name="program" value="your-advice">
-                <span class="form-control__text">Не знаю (Нужен ваш совет)</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+          <!-- Выбор программы -->
+          <fieldset class="form__group form__group--programs container-form-group">
+            <legend class="visually-hidden">Выбор программы.</legend>
+            <ul class="form__control-list form__control-list--programs">
+              <li class="form__control-item">
+                <!-- Если input неактивен, добавить у label класс disabled -->
+                <label class="form__control-label form-control form-control--radio">
+                  <input class="visually-hidden form-control__input" type="radio" name="program" value="weight-loss"
+                    checked>
+                  <span class="form-control__text">Похудение</span>
+                </label>
+              </li>
+              <li class="form__control-item">
+                <label class="form__control-label form-control form-control--radio">
+                  <input class="visually-hidden form-control__input" type="radio" name="program" value="mass-gain">
+                  <span class="form-control__text">Набор массы</span>
+                </label>
+              </li>
+              <li class="form__control-item">
+                <label class="form__control-label form-control form-control--radio">
+                  <input class="visually-hidden form-control__input" type="radio" name="program" value="your-advice">
+                  <span class="form-control__text">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
 
         <!-- Контактные данные (владельца кота) -->
-        <fieldset class="form__group">
+        <fieldset class="form__group container-form-group">
           <legend class="form__group-title form__group-title--decoration form__group-title--decoration-contacts title">
             <span class="form__group-title-text">Контактные данные (владельца
               кота)</span>
           </legend>
-          <ul class="form__field-list">
+          <ul class="form__field-list form__field-list--contacts">
             <li class="form__field-item">
               <!-- Если не указаны данные в поле ввода, добавить у label класс form-field--error -->
               <label class="form__field-label form-field form-field--mail">
@@ -147,23 +152,25 @@
         </fieldset>
 
         <!-- Комментарий -->
-        <fieldset class="form__group">
+        <fieldset class="form__group form__group--comment container-form-group">
           <legend class="form__group-title form__group-title--decoration form__group-title--decoration-comment title">
             <span class="form__group-title-text">Комментарий</span>
           </legend>
-          <label class="visually-hidden" for="form-field-comment">Ваш комментарий.</label>
-          <!-- Если не указаны данные в поле ввода, добавить класс input--error -->
+          <!-- Если не указаны данные в поле ввода, добавить у label класс form-field--error -->
+          <label class="visually-hidden form__field-label" for="form-field-comment">Ваш
+            комментарий.</label>
           <textarea class="form__field-input form__field-input--textarea input input--textarea" id="form-field-comment"
             name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
         <!-- Дополнительно -->
-        <fieldset class="form__group">
-          <legend class="form__group-title form__group-title--decoration title">
+        <fieldset class="form__group form__group--additionally container-form-group">
+          <legend
+            class="form__group-title form__group-title--decoration form__group-title--decoration-additionally title">
             <span class="form__group-title-text">Дополнительно
             </span>
           </legend>
-          <ul class="form__control-list">
+          <ul class="form__control-list form__control-list--additionally">
             <li class="form__control-item">
               <!-- Если input неактивен, добавить у label класс disabled -->
               <label class="form__control-label form-control form-control--checkbox">

@@ -5,7 +5,7 @@
   max-width: 100%;
   color: #111111;
   vertical-align: middle;
-  transition: all 0.3s;
+  transition: color 0.5s ease-out;
 
   @media (min-width: variables.$tablet-width) {
     &:hover {
@@ -16,20 +16,17 @@
   &:focus-visible {
     outline: variables.$outline-focus;
     color: variables.$footer-logo-color-hover-focus;
-    transition-duration: 0s;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       outline: variables.$outline-focus;
       color: variables.$footer-logo-color-hover-focus;
-      transition-duration: 0s;
     }
   }
 
   &:active {
     color: variables.$footer-logo-color-active;
-    transition-duration: 0.1s;
   }
 }
 

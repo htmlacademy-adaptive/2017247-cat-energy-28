@@ -25,7 +25,6 @@
 
 .socials-list__link {
   text-decoration: none;
-  transition: all 0.3s;
 
   &::before {
     position: absolute;
@@ -39,7 +38,7 @@
     mask-size: 28px 22px;
     mask-position: center;
     background-color: #666666;
-    transition: all 0.3s;
+    transition: background-color 0.5s ease-out, opacity 0.5s;
   }
 
   &--vkontakte {
@@ -68,29 +67,24 @@
 
   &:focus-visible {
     outline: variables.$outline-focus;
-    transition-duration: 0s;
   }
 
   &:focus-visible::before {
     background-color: variables.$footer-link-color-hover-focus;
-    transition-duration: 0s;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       outline: variables.$outline-focus;
-      transition-duration: 0s;
     }
 
     &:focus::before {
       background-color: variables.$footer-link-color-hover-focus;
-      transition-duration: 0s;
     }
   }
 
   &:active::before {
     background-color: variables.$footer-link-color-hover-focus;
     opacity: variables.$opacity-link-active;
-    transition-duration: 0.1s;
   }
 }

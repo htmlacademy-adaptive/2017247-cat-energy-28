@@ -63,7 +63,7 @@
   appearance: none;
   padding: 0;
   border: 0;
-  transition: all 0.3s linear;
+  transition: background-color 0.3s linear;
   cursor: col-resize;
 
   &::before {
@@ -77,7 +77,7 @@
     border: 2px solid #666666;
     border-radius: 20px;
     background-color: #ffffff;
-    transition: all 0.3s;
+    transition: border-color 0.3s;
   }
 
   &::after {
@@ -93,7 +93,7 @@
     mask-size: 24px 18px;
     mask-position: center;
     background-color: #666666;
-    transition: all 0.3s;
+    transition: background-color 0.3s;
   }
 
   @media (min-width: variables.$tablet-width) {
@@ -112,40 +112,33 @@
 
   &:focus-visible {
     outline: variables.$outline-focus;
-    transition-duration: 0s;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       outline: variables.$outline-focus;
-      transition-duration: 0s;
     }
   }
 
   &:focus-visible::before {
     outline: variables.$outline-focus;
-    transition-duration: 0s;
   }
 
   @supports not selector(:focus-visible) {
     &:focus::before {
       outline: variables.$outline-focus;
-      transition-duration: 0s;
     }
   }
 
   &:active {
     background-color: variables.$btn-control-color-active;
-    transition-duration: 0.1s;
   }
 
   &:active::before {
     border-color: variables.$btn-control-color-active;
-    transition-duration: 0.1s;
   }
 
   &:active::after {
     background-color: variables.$btn-control-color-active;
-    transition-duration: 0.1s;
   }
 }

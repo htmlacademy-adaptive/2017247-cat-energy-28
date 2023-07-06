@@ -9,7 +9,7 @@
   text-transform: uppercase;
   color: #444444;
   appearance: none;
-  transition: all 0.3s;
+  transition: border-color 0.5s;
   cursor: pointer;
 
   &::placeholder {
@@ -17,6 +17,7 @@
   }
 
   @media (min-width: variables.$tablet-width) {
+    padding: 10px 19px;
     font-size: 20px;
     line-height: 30px;
 
@@ -27,19 +28,16 @@
 
   &:focus-visible {
     outline: variables.$outline-focus;
-    transition-duration: 0s;
   }
 
   @supports not selector(:focus-visible) {
     &:focus {
       outline: variables.$outline-focus;
-      transition-duration: 0s;
     }
   }
 
   &:active {
     border-color: variables.$input-field-border-color-hover-active;
-    transition-duration: 0.1s;
   }
 
   // Неактивное состояние
@@ -48,15 +46,13 @@
     pointer-events: none;
   }
 
-  // Ошибка ввода или не указаны данные
-  &--error {
-    outline: 1px solid #ff8282;
-    border: 1px solid #ff8282;
-  }
-
   &--textarea {
     padding: 8px 11px 8px 14px;
     height: 100%;
     resize: none;
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 9px 18px;
+    }
   }
 }

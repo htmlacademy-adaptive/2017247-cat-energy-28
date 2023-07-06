@@ -31,11 +31,11 @@
 @use "./blocks/main/catalog/additional-products-list.scss";
 
 // Form
-@use "./blocks/main/form/questionnaire.scss";
 @use "./blocks/main/form/form.scss";
 @use "./blocks/main/form/form-field.scss";
 @use "./blocks/main/form/input.scss";
 @use "./blocks/main/form/form-control.scss";
+@use "./blocks/main/form/container-form-group.scss";
 
 // Footer
 @use "./blocks/footer/footer-contacts.scss";
