@@ -1,7 +1,7 @@
 @use "./variables.scss";
 
 .form__group-wrapper {
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 75px;
@@ -28,7 +28,7 @@
   }
 
   &--name {
-    padding: 22px 0;
+    padding: 22px 0 24px 0;
     margin-bottom: 0;
 
     @media (min-width: variables.$tablet-width) {
@@ -42,7 +42,7 @@
   }
 
   &--programs {
-    padding: 20px 0;
+    padding: 22px 0 19px 0;
     margin-bottom: 0;
 
     @media (min-width: variables.$tablet-width) {
@@ -71,6 +71,8 @@
   }
 
   &--comment {
+    margin-bottom: 22px;
+
     @media (min-width: variables.$tablet-width) {
       margin-bottom: 60px;
     }
@@ -194,7 +196,7 @@
   }
 
   &--decoration-comment {
-    margin-bottom: 33px;
+    margin-bottom: 38px;
 
     @media (min-width: variables.$tablet-width) {
       margin-bottom: 76px;
@@ -204,6 +206,7 @@
 
 .form__group-title-text {
   position: relative;
+  display: inline-block;
 
   &::before {
     position: absolute;
@@ -224,6 +227,10 @@
       width: calc(100% + 80px);
       left: -40px;
       right: -40px;
+    }
+
+    br {
+      display: none;
     }
   }
 }

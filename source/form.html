@@ -18,41 +18,44 @@
 <body class=" page__body">
 
   <!--ШАПКА СТРАНИЦЫ ФОРМЫ-->
-  <header class="page__header main-header main-header--inner container">
+  <header class="page__header main-header main-header--inner">
 
-    <!--Логотип сайта-->
-    <a class="main-header__logo-link logo" href="index.html">
-      <picture>
-        <source media="(min-width: 1440px)" srcset="img/svg/logo/logo-icon-desktop.svg" width="71" height="59">
-        <source media="(min-width: 769px)" srcset="img/svg/logo/logo-icon-tablet.svg" width="61" height="50">
-        <img class="logo__image logo__image--icon" src="img/svg/logo/logo-icon-mobile.svg" width="34" height="38"
-          alt="">
-      </picture>
-      <img class="logo__image logo__image--text" src="img/svg/logo/logo-text.svg" width="101" height="18"
-        alt="Логотип интернет-магазина функционального питания для котов «Кэт энерджи».">
-    </a>
+    <div class="main-header__container container">
+      <!--Логотип сайта-->
+      <a class="main-header__logo-link logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/svg/logo/logo-icon-desktop.svg" width="71" height="59">
+          <source media="(min-width: 769px)" srcset="img/svg/logo/logo-icon-tablet.svg" width="61" height="50">
+          <img class="logo__image logo__image--icon" src="img/svg/logo/logo-icon-mobile.svg" width="34" height="38"
+            alt="">
+        </picture>
+        <img class="logo__image logo__image--text" src="img/svg/logo/logo-text.svg" width="101" height="18"
+          alt="Логотип интернет-магазина функционального питания для котов «Кэт энерджи».">
+      </a>
 
-    <!--Навигация-->
-    <!-- Для открытия меню добавить класс main-navigation--opened, а для закрытия класс main-navigation--closed -->
-    <nav class="main-header__navigation main-navigation main-navigation--inner main-navigation--nojs">
-      <button class="main-navigation__toggle" type="button">
-        <span class="visually-hidden">Открыть меню/закрыть меню.</span>
-      </button>
-      <div class="main-navigation__wrapper">
-        <ul class="main-navigation__list">
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link main-navigation__link--current" href="form.html" aria-current="page">Подбор
-              программы</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      <!--Навигация-->
+      <!-- Для открытия меню добавить класс main-navigation--opened, а для закрытия класс main-navigation--closed -->
+      <nav class="main-header__navigation main-navigation main-navigation--inner main-navigation--nojs">
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню/закрыть меню.</span>
+        </button>
+        <div class="main-navigation__wrapper">
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link main-navigation__link--current" href="form.html"
+                aria-current="page">Подбор
+                программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <!--ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ ФОРМЫ-->
@@ -127,8 +130,7 @@
         <!-- Контактные данные (владельца кота) -->
         <fieldset class="form__group container-form-group">
           <legend class="form__group-title form__group-title--decoration form__group-title--decoration-contacts title">
-            <span class="form__group-title-text">Контактные данные (владельца
-              кота)</span>
+            <span class="form__group-title-text">Контактные данные <br>(владельца кота)</span>
           </legend>
           <ul class="form__field-list form__field-list--contacts">
             <li class="form__field-item">
