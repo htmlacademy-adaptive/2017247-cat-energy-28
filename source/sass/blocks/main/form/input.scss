@@ -1,0 +1,58 @@
+@use "./variables.scss";
+
+.input {
+  padding: 9.5px 20px;
+  border: 1px solid #e7e7e7;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #444444;
+  appearance: none;
+  transition: border-color 0.5s;
+  cursor: pointer;
+
+  &::placeholder {
+    color: #444444;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 10px 19px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &:hover {
+      border-color: variables.$input-field-border-color-hover-active;
+    }
+  }
+
+  &:focus-visible {
+    outline: variables.$outline-focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: variables.$outline-focus;
+    }
+  }
+
+  &:active {
+    border-color: variables.$input-field-border-color-hover-active;
+  }
+
+  // Неактивное состояние
+  &:disabled {
+    opacity: variables.$input-label-opacity-disabled;
+    pointer-events: none;
+  }
+
+  &--textarea {
+    padding: 8px 11px 8px 14px;
+    height: 100%;
+    resize: none;
+
+    @media (min-width: variables.$tablet-width) {
+      padding: 9px 18px;
+    }
+  }
+}

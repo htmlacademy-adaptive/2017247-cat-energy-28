@@ -1,0 +1,76 @@
+@use "./variables.scss";
+
+.main-content-inner {
+  flex: 1 1 auto;
+  padding: 27px 20px 35px 20px;
+
+  @media (max-width: variables.$mobile-width-only) {
+    border-top: 1px solid #d9d9d9;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 56px;
+    padding-bottom: 86px;
+  }
+
+  &--form {
+    padding-bottom: 32px;
+
+    @media (min-width: variables.$tablet-width) {
+      padding-bottom: 72px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      padding-bottom: 82px;
+    }
+  }
+}
+
+.main-content-inner__title {
+  margin: 0;
+  margin-bottom: 41px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 84px;
+  }
+
+  &--form {
+    margin-bottom: 37px;
+
+    @media (min-width: variables.$tablet-width) {
+      margin-bottom: 54px;
+      margin-left: 39px;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      margin-left: 0;
+    }
+  }
+}
+
+.main-content-inner__description {
+  margin: 0 0 17px 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #000000;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 33px 39px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-left: 0;
+    margin-bottom: 66px;
+  }
+}

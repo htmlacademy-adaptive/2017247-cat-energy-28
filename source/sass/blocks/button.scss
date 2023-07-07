@@ -1,0 +1,47 @@
+@use "./variables.scss";
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #68b738;
+  border: none;
+  appearance: none;
+  transition: background-color 0.5s ease-out, color 0.5s;
+  cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    &:hover {
+      background-color: variables.$bg-hover-active;
+    }
+  }
+
+  &:focus-visible {
+    outline: variables.$outline-focus;
+    outline-offset: 0;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: variables.$outline-focus;
+      outline-offset: 0;
+    }
+  }
+
+  &:active {
+    background-color: variables.$bg-hover-active;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: variables.$btn-bg-disabled;
+    opacity: variables.$btn-opacity-disabled;
+    pointer-events: none;
+  }
+}

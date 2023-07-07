@@ -1,0 +1,47 @@
+@use "./variables.scss";
+
+.develop {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
+  color: #444444;
+  transition: color 0.5s ease-out, opacity 0.5s;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 168px;
+
+    &:hover {
+      color: variables.$footer-link-color-hover-focus;
+    }
+  }
+
+  &:focus-visible {
+    color: variables.$footer-link-color-hover-focus;
+    outline: variables.$outline-focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      color: variables.$footer-link-color-hover-focus;
+      outline: variables.$outline-focus;
+    }
+  }
+
+  &:active {
+    color: variables.$footer-link-color-hover-focus;
+    opacity: variables.$opacity-link-active;
+  }
+}
+
+.develop__text {
+  margin-right: 18px;
+}
+
+.develop__icon-logo-htmlacademy {
+  flex-shrink: 0;
+  height: 37px;
+}

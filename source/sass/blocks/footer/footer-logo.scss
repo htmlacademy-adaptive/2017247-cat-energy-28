@@ -1,0 +1,38 @@
+@use "./variables.scss";
+
+.footer-logo {
+  display: inline-flex;
+  max-width: 100%;
+  color: #111111;
+  vertical-align: middle;
+  transition: color 0.5s ease-out;
+
+  @media (min-width: variables.$tablet-width) {
+    &:hover {
+      color: variables.$footer-logo-color-hover-focus;
+    }
+  }
+
+  &:focus-visible {
+    outline: variables.$outline-focus;
+    color: variables.$footer-logo-color-hover-focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: variables.$outline-focus;
+      color: variables.$footer-logo-color-hover-focus;
+    }
+  }
+
+  &:active {
+    color: variables.$footer-logo-color-active;
+  }
+}
+
+.footer-logo__icon {
+  @media (min-width: variables.$tablet-width) {
+    width: 143px;
+    height: 26px;
+  }
+}

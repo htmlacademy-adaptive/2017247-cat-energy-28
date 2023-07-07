@@ -1,0 +1,90 @@
+@use "./variables.scss";
+
+.socials-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.socials-list__item,
+.socials-list__link {
+  position: relative;
+  min-width: 28px;
+  min-height: 22px;
+}
+
+.socials-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-list__link {
+  text-decoration: none;
+
+  &::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 28px;
+    height: 22px;
+    mask-repeat: no-repeat;
+    mask-size: 28px 22px;
+    mask-position: center;
+    background-color: #666666;
+    transition: background-color 0.5s ease-out, opacity 0.5s;
+  }
+
+  &--vkontakte {
+    &::before {
+      mask-image: url("../img/svg/icon/vkontakte.svg");
+    }
+  }
+
+  &--youtube {
+    &::before {
+      mask-image: url("../img/svg/icon/youtube.svg");
+    }
+  }
+
+  &--telegram {
+    &::before {
+      mask-image: url("../img/svg/icon/telegram.svg");
+    }
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &:hover::before {
+      background-color: variables.$footer-link-color-hover-focus;
+    }
+  }
+
+  &:focus-visible {
+    outline: variables.$outline-focus;
+  }
+
+  &:focus-visible::before {
+    background-color: variables.$footer-link-color-hover-focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: variables.$outline-focus;
+    }
+
+    &:focus::before {
+      background-color: variables.$footer-link-color-hover-focus;
+    }
+  }
+
+  &:active::before {
+    background-color: variables.$footer-link-color-hover-focus;
+    opacity: variables.$opacity-link-active;
+  }
+}

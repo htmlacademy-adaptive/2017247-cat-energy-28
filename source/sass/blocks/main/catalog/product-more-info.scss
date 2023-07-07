@@ -1,0 +1,145 @@
+@use "./variables.scss";
+
+.product-more-info {
+  padding: 25px 0;
+
+  @media (min-width: variables.$tablet-width) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 39px 36px;
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 84.2%;
+      border: 2px solid #f2f2f2;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 40px;
+  }
+}
+
+.product-more-info__link {
+  display: grid;
+  text-decoration: none;
+  color: #444444;
+}
+
+.product-more-info__link--show-more {
+  row-gap: 8px;
+  margin-bottom: 21px;
+  background-image: url("../img/svg/icon/plus.svg");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  transition: opacity 0.5s;
+
+  @media (min-width: variables.$tablet-width) {
+    row-gap: 23px;
+    margin-bottom: 87px;
+    background-size: 60px 60px;
+    background-position: center top 95px;
+
+    &:hover {
+      opacity: variables.$opacity-link-hover;
+    }
+  }
+
+  &:focus-visible {
+    outline: variables.$outline-focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: variables.$outline-focus;
+    }
+  }
+
+  &:active {
+    opacity: variables.$opacity-link-active;
+  }
+}
+
+.product-more-info__link--show-all {
+  background-color: #f2f2f2;
+  transition: background-color 0.5s ease-out, color 0.5s;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 248px;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+  }
+
+  &:focus-visible {
+    outline: variables.$outline-focus;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: variables.$outline-focus;
+    }
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    min-width: 168px;
+  }
+}
+
+.product-more-info__text {
+  margin: 0;
+  margin-top: 53px;
+  color: #111111;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-top: 203px;
+    font-size: 20px;
+    line-height: 22px;
+
+    br {
+      display: block;
+    }
+  }
+}
+
+.product-more-info__description {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+
+    br {
+      display: block;
+    }
+  }
+}
