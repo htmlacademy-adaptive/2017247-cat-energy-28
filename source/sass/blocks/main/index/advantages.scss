@@ -79,28 +79,28 @@
 
   &--nutrients {
     &::before {
-      background-image: url("../img/svg/icon/leaf.svg");
+      background-image: url("../img/stack.svg#leaf");
       background-size: 30px 32px;
     }
   }
 
   &--pour-boiling-water {
     &::before {
-      background-image: url("../img/svg/icon/glass-of-water.svg");
+      background-image: url("../img/stack.svg#glass-of-water");
       background-size: 26px 29px;
     }
   }
 
   &--meal-replacement {
     &::before {
-      background-image: url("../img/svg/icon/eat.svg");
+      background-image: url("../img/stack.svg#eat");
       background-size: 25px 30px;
     }
   }
 
   &--quick-result {
     &::before {
-      background-image: url("../img/svg/icon/watch.svg");
+      background-image: url("../img/stack.svg#watch");
       background-size: 26px 31px;
     }
   }

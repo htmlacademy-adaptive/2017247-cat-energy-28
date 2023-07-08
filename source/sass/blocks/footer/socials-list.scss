@@ -43,19 +43,19 @@
 
   &--vkontakte {
     &::before {
-      mask-image: url("../img/svg/icon/vkontakte.svg");
+      mask-image: url("../img/stack.svg#vkontakte");
     }
   }
 
   &--youtube {
     &::before {
-      mask-image: url("../img/svg/icon/youtube.svg");
+      mask-image: url("../img/stack.svg#youtube");
     }
   }
 
   &--telegram {
     &::before {
-      mask-image: url("../img/svg/icon/telegram.svg");
+      mask-image: url("../img/stack.svg#telegram");
     }
   }
 
