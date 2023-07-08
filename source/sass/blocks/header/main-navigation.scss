@@ -50,7 +50,7 @@
 
 // Закрытое меню
 .main-navigation--closed .main-navigation__toggle {
-  background-image: url("../img/svg/icon/menu-burger-opened.svg");
+  background-image: url("../img/stack.svg#menu-burger-opened");
   background-size: 24px 18px;
   background-repeat: no-repeat;
   background-position: center top 22px;
@@ -64,7 +64,7 @@
 
 // Открытое меню
 .main-navigation--opened .main-navigation__toggle {
-  background-image: url("../img/svg/icon/menu-burger-closed.svg");
+  background-image: url("../img/stack.svg#menu-burger-closed");
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: center top 21px;
