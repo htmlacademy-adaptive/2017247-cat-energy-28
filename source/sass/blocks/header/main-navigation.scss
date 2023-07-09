@@ -81,18 +81,18 @@
   }
 
   .main-navigation--nojs {
-    margin-top: 17px;
+    transform: translateY(17px);
   }
+}
 
-  .main-navigation--nojs .main-navigation__toggle {
-    display: none;
-  }
+.main-navigation--nojs .main-navigation__toggle {
+  display: none;
+}
 
-  .main-navigation--nojs .main-navigation__wrapper {
-    position: static;
-    width: calc(100% + 40px);
-    transform: translateX(-20px);
-  }
+.main-navigation--nojs .main-navigation__wrapper {
+  position: static;
+  width: calc(100% + 40px);
+  transform: translateX(-20px);
 }
 
 .main-navigation__list {

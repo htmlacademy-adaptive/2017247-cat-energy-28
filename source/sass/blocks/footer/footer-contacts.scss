@@ -31,6 +31,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 2px;
 
+  @media (min-width: 421px) {
+    gap: 40px;
+  }
+
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: 25% 25%;
     gap: 50px;
@@ -67,6 +71,10 @@
 }
 
 .footer-contacts__address {
+  @media (min-width: 421px) {
+    justify-self: end;
+  }
+
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 7px;
     text-align: right;
