@@ -51,6 +51,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
+  // padding: 10px 20px 0 20px;
   padding: 10px 20px 17px 20px;
 
   @media (min-width: variables.$tablet-width) {

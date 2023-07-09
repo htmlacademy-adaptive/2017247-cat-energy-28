@@ -78,7 +78,7 @@
     left: 13px;
   }
 
-  @media (min-width: variables.$tablet-width) and (max-width: 1439px) {
+  @media (min-width: variables.$tablet-width) and (max-width: 1279px) {
     position: static;
     display: block;
     grid-column: 2/3;

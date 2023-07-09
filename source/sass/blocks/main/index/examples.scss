@@ -76,7 +76,7 @@
   }
 }
 
-@media (min-width: variables.$tablet-width) and (max-width: 1439px) {
+@media (min-width: variables.$tablet-width) and (max-width: 1279px) {
   .examples__description-wrapper {
     display: grid;
     grid-template-columns: 51.6% 1fr;
